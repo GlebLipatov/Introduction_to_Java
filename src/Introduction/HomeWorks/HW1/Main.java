@@ -7,12 +7,14 @@ public class Main {
         Task3 task3 = new Task3();
         Task5 task5 = new Task5();
         Task8 task8 = new Task8();
+        Task9 task9 = new Task9();
 
-        task1.solution(100);
+        task1.solution(1000);
         task2.solution(1000);
         task3.start();
 
         task5.solution();
         task8.solution();
+        task9.solution();
     }
 }
