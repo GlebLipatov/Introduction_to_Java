@@ -2,7 +2,7 @@ package Introduction.HomeWorks.HW1;
 
 public class Task2 {
 
-    private String message = "Вывести все простые числа от 1 до 1000";
+    private String message = "2. Вывести все простые числа от 1 до 1000";
 
     public void solution(int number) {
         System.out.println(message);

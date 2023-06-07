@@ -10,6 +10,6 @@ public class Task1 {
         for (int i = 0; i <= number; i++) {
             result += i;
         }
-        System.out.printf("%s\nСумма числе ровна: %d\n", message, result);
+        System.out.printf("%s\nСумма числе ровна: %d\n\n", message, result);
     }
 }
