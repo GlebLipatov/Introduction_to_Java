@@ -78,7 +78,7 @@ public class Task3 {
             return false;
         } else {
             try {
-                Double num = Double.parseDouble(number);
+                Double.parseDouble(number);
                 return true;
             } catch (NumberFormatException e) {
                 return false;
