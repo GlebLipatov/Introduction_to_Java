@@ -2,19 +2,11 @@ package Introduction.HomeWorks.HW1;
 
 public class Main {
     public static void main(String[] args) {
-        Task1 task1 = new Task1();
-        Task2 task2 = new Task2();
-        Task3 task3 = new Task3();
-        Task5 task5 = new Task5();
-        Task8 task8 = new Task8();
-        Task9 task9 = new Task9();
-
-        task1.solution(1000);
-        task2.solution(1000);
-        task3.start();
-
-        task5.solution();
-        task8.solution();
-        task9.solution();
+        Task1.solution(1000);
+        Task2.solution(1000);
+        Task3.start();
+        Task5.solution();
+        Task8.solution();
+        Task9.solution();
     }
 }

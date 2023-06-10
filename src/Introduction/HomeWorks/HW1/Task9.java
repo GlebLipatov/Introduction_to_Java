@@ -4,12 +4,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Task9 {
-    String message = "9. Записать в файл данные";
-    String[][] data = new String[][] {{"Name", "Surname", "Age"},
+    static String message = "9. Записать в файл данные";
+    static String[][] data = new String[][] {{"Name", "Surname", "Age"},
                                         {"Kate", "Smith", "20"},
                                         {"Paul", "Green", "25"},
                                         {"Mike", "Black", "23"},};
-    public void solution(){
+    public static void solution(){
         System.out.println("\n" + message);
         try (FileWriter fw = new FileWriter("file.txt", true)) {
             for (String[] row : data) {

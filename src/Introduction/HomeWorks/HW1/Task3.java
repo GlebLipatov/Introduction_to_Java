@@ -3,18 +3,18 @@ package Introduction.HomeWorks.HW1;
 import java.util.Scanner;
 
 public class Task3 {
-    Scanner scanner = new Scanner(System.in);
-    private String message = "3. Реализовать простой калькулятор";
-    private String enterFirstNumber = "Enter a first number: ";
-    private String enterSecondNumber = "Enter a second number: ";
-    private String enterAction = "Enter action(+-*/): ";
-    private String enterNotZero = "Enter something number above zero: ";
+    static Scanner  scanner = new Scanner(System.in);
+    private static String message = "3. Реализовать простой калькулятор";
+    private static String enterFirstNumber = "Enter a first number: ";
+    private static String enterSecondNumber = "Enter a second number: ";
+    private static String enterAction = "Enter action(+-*/): ";
+    private static String enterNotZero = "Enter something number above zero: ";
 
-    private String menuExit = "1 - Continue.\n0 - Exit.";
-    private String menuExitValidMessage = "Enter only 1 or 0: ";
+    private static String menuExit = "1 - Continue.\n0 - Exit.";
+    private static String menuExitValidMessage = "Enter only 1 or 0: ";
 
 
-    public void start() {
+    public static void start() {
         System.out.println("\n" + message);
 
 
@@ -26,7 +26,7 @@ public class Task3 {
         }
     }
 
-    private Double solution(Double firstNumber, Character action, Double secondNumber) {
+    private static Double solution(Double firstNumber, Character action, Double secondNumber) {
         switch (action) {
             case '+':
                 return firstNumber + secondNumber;
@@ -49,7 +49,7 @@ public class Task3 {
         }
     }
 
-    private Double inputNumber(String message) {
+    private static Double inputNumber(String message) {
         do {
             System.out.printf("%s", message);
             String input = scanner.nextLine();
@@ -59,7 +59,7 @@ public class Task3 {
 
 
 
-    private Character action(String message) {
+    private static Character action(String message) {
         while (true) {
             System.out.printf("%s", message);
             String action = scanner.nextLine();
@@ -67,13 +67,13 @@ public class Task3 {
         }
     }
 
-    private Boolean isAction(String action) {
+    private static Boolean isAction(String action) {
         String actions = "+-*/";
         if (action.length() == 1 && actions.contains(action)) return true;
         return false;
     }
 
-    private boolean isNumber(String number) {
+    private static boolean isNumber(String number) {
         if (number.isEmpty()) {
             return false;
         } else {
@@ -86,7 +86,7 @@ public class Task3 {
         }
     }
 
-    private boolean exit() {
+    private static boolean exit() {
         System.out.println(menuExit);
         while (true) {
             String inputFromUser = scanner.nextLine();

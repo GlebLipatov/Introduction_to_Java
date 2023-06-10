@@ -1,12 +1,12 @@
 package Introduction.HomeWorks.HW1;
 
 public class Task8 {
-    String message = "8. Задан массив, например, nums = [1,7,3,6,5,6]. \n" +
+    static String message = "8. Задан массив, например, nums = [1,7,3,6,5,6]. \n" +
             "Написать программу, которая найдет индекс i для массива\n" +
             "такой, что сумма элементов с индексами < i равна сумме\n" +
             "элементов с индексами > i.";
 
-    public void solution() {
+    public static void solution() {
         System.out.println("\n" + message);
 
         int[] nums = new int[]{1, 7, 3, 6, 5, 6};

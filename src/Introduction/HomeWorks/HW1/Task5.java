@@ -3,9 +3,9 @@ package Introduction.HomeWorks.HW1;
 import java.util.Arrays;
 
 public class Task5 {
-    String message = "5. Во фразе \"Добро пожаловать на курс по Java\" переставить слова в обратном порядке.";
+    static String message = "5. Во фразе \"Добро пожаловать на курс по Java\" переставить слова в обратном порядке.";
 
-    public void solution() {
+    public static void solution() {
         System.out.println("\n" + message);
 
         String input = "Добро пожаловать на курс по Java";
