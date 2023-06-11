@@ -18,7 +18,7 @@ public class Task1 {
     public static void solution() {
         String[] data = parse(json);
         String result = createRequest(request, data);
-        System.out.printf("%s \n\nResult: %s", task, result);
+        System.out.printf("%s \n\nResult: %s\n", task, result);
     }
 
     private static String[] parse(String json) {
