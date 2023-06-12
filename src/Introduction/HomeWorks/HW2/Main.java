@@ -6,7 +6,8 @@ public class Main {
         Task4 task4 = new Task4();
 
         Task1.solution();
-        task2.solution();
+        Task3.solution();
         task4.solution();
+        task2.solution();
     }
 }

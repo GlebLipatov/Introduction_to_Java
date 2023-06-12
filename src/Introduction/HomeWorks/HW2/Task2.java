@@ -7,10 +7,10 @@ import java.io.IOException;
 import java.util.logging.*;
 
 public class Task2 {
-    private String task = "1. Реализуйте алгоритм сортировки пузырьком числового массива, " +
+    private String task = "2. Реализуйте алгоритм сортировки пузырьком числового массива, " +
             "\nрезультат после каждой итерации запишите в лог-файл.";
 
-    private int[] array = getArray(100);
+    private int[] array = getArray(5);
     DoLog doLog;
 
     public void solution() {
@@ -24,7 +24,7 @@ public class Task2 {
 
             isSorted = true;
             for (int i = 1; i < array.length; i++) {
-                String message = "Iter: " + iterCount++ + ": " + arrayToString(array);
+                String message = "\nIter " + iterCount++ + ": " + arrayToString(array) + "\n";
                 doLog.logging(message);
                 if (array[i - 1] > array[i]) {
                     isSorted = false;
