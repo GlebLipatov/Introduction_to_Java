@@ -1,20 +1,27 @@
 package Introduction.HomeWorks.HW1;
 
+import Introduction.HomeWorks.HW2.DoLog;
+
 import java.util.Scanner;
 
 public class Task3 {
-    static Scanner  scanner = new Scanner(System.in);
-    private static String message = "3. Реализовать простой калькулятор";
-    private static String enterFirstNumber = "Enter a first number: ";
-    private static String enterSecondNumber = "Enter a second number: ";
-    private static String enterAction = "Enter action(+-*/): ";
-    private static String enterNotZero = "Enter something number above zero: ";
 
-    private static String menuExit = "1 - Continue.\n0 - Exit.";
-    private static String menuExitValidMessage = "Enter only 1 or 0: ";
+    private Scanner scanner = new Scanner(System.in);
+    private String message = "3. Реализовать простой калькулятор";
+    private String enterFirstNumber = "Enter a first number: ";
+    private String enterSecondNumber = "Enter a second number: ";
+    private String enterAction = "Enter action(+-*/): ";
+    private String enterNotZero = "Enter something number above zero: ";
+
+    private String menuExit = "1 - Continue.\n0 - Exit.";
+    private String menuExitValidMessage = "Enter only 1 or 0: ";
+    DoLog doLog;
+    public Task3(Class classToLog) {
+        this.doLog = new DoLog(classToLog);
+    }
 
 
-    public static void start() {
+    public void start() {
         System.out.println("\n" + message);
 
 
@@ -26,30 +33,40 @@ public class Task3 {
         }
     }
 
-    private static Double solution(Double firstNumber, Character action, Double secondNumber) {
+    private Double solution(Double firstNumber, Character action, Double secondNumber) {
+        String message;
+        Double result;
         switch (action) {
             case '+':
-                return firstNumber + secondNumber;
+                result = firstNumber + secondNumber;
+                message = getMessage(firstNumber, action, secondNumber, result);
+                doLog.logging(message);
+                return result;
             case '-':
-                return firstNumber - secondNumber;
+                result = firstNumber - secondNumber;
+                message = getMessage(firstNumber, action, secondNumber, result);
+                doLog.logging(message);
+                return result;
             case '*':
-                return firstNumber * secondNumber;
+                result = firstNumber * secondNumber;
+                message = getMessage(firstNumber, action, secondNumber, result);
+                doLog.logging(message);
+                return result;
             case '/':
-                if (secondNumber == 0) {
-                    while (true) {
-                        Double inputFromUser = inputNumber(enterNotZero);
-                        if (inputFromUser != 0) {
-                            return firstNumber / inputFromUser;
-                        }
-                    }
+                while (secondNumber == 0) {
+                    secondNumber = inputNumber(enterNotZero);
                 }
-                return firstNumber / secondNumber;
+
+                result = firstNumber / secondNumber;
+                message = getMessage(firstNumber, action, secondNumber, result);
+                doLog.logging(message);
+                return result;
             default:
                 return 0.0;
         }
     }
 
-    private static Double inputNumber(String message) {
+    private Double inputNumber(String message) {
         do {
             System.out.printf("%s", message);
             String input = scanner.nextLine();
@@ -58,8 +75,7 @@ public class Task3 {
     }
 
 
-
-    private static Character action(String message) {
+    private Character action(String message) {
         while (true) {
             System.out.printf("%s", message);
             String action = scanner.nextLine();
@@ -67,13 +83,13 @@ public class Task3 {
         }
     }
 
-    private static Boolean isAction(String action) {
+    private Boolean isAction(String action) {
         String actions = "+-*/";
         if (action.length() == 1 && actions.contains(action)) return true;
         return false;
     }
 
-    private static boolean isNumber(String number) {
+    private boolean isNumber(String number) {
         if (number.isEmpty()) {
             return false;
         } else {
@@ -86,7 +102,16 @@ public class Task3 {
         }
     }
 
-    private static boolean exit() {
+    private String getMessage(Double firstNumber, Character action, Double secondNumber, Double result) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("\nFirstNumber=").append("'").append(firstNumber).append("'\n");
+        sb.append("Action=").append("'").append(action).append("'\n");
+        sb.append("SecontNumber=").append("'").append(secondNumber).append("'\n");
+        sb.append("Result=").append("'").append(result).append("'\n");
+        return sb.toString();
+    }
+
+    private boolean exit() {
         System.out.println(menuExit);
         while (true) {
             String inputFromUser = scanner.nextLine();

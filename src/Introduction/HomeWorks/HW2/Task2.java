@@ -7,31 +7,27 @@ import java.io.IOException;
 import java.util.logging.*;
 
 public class Task2 {
-    private static String task = "1. Реализуйте алгоритм сортировки пузырьком числового массива, " +
+    private String task = "1. Реализуйте алгоритм сортировки пузырьком числового массива, " +
             "\nрезультат после каждой итерации запишите в лог-файл.";
 
-    private static int[] array = new int[]{5, 4, 3, 2, 1, 0};
+    private int[] array = getArray(100);
+    DoLog doLog;
 
-    public static void solution() {
+    public void solution() {
+        doLog = new DoLog(Task2.class);
         System.out.println(task);
 
         int temp;
-        boolean isSorted = true;
-        FileHandler fileHandler;
-        Logger logger = Logger.getLogger(Task2.class.getName());
-        SimpleFormatter simpleFormatter = new SimpleFormatter();
-        try {
-            fileHandler = new FileHandler("src/Introduction/HomeWorks/HW2/log.txt");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        boolean isSorted = false;
+        int iterCount = 1;
+        while (!isSorted) {
 
-        while (isSorted) {
-            doLog(array, logger, fileHandler, simpleFormatter);
-            isSorted = false;
+            isSorted = true;
             for (int i = 1; i < array.length; i++) {
+                String message = "Iter: " + iterCount++ + ": " + arrayToString(array);
+                doLog.logging(message);
                 if (array[i - 1] > array[i]) {
-                    isSorted = true;
+                    isSorted = false;
                     temp = array[i - 1];
                     array[i - 1] = array[i];
                     array[i] = temp;
@@ -40,16 +36,15 @@ public class Task2 {
         }
     }
 
-    private static void doLog(int[] arr,
-                              Logger logger,
-                              Handler handler,
-                              Formatter formatter) {
-        logger.addHandler(handler);
-        handler.setFormatter(formatter);
-        logger.info(String.join(" ", arrayToString(arr)));
+    private int[] getArray(int size) {
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) {
+            array[i] = size - i;
+        }
+        return array;
     }
 
-    private static String arrayToString(int[] array) {
+    private String arrayToString(int[] array) {
         StringBuilder sb = new StringBuilder();
         for (int number : array) {
             sb.append(number).append(" ");
