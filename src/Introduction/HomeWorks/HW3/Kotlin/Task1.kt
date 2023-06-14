@@ -1,7 +1,7 @@
 package Introduction.HomeWorks.HW3.Kotlin
 
 class Task1 {
-    fun solution() : Unit {
+    fun solution() {
         println("1. Реализовать алгоритм сортировки слиянием(метод взять из Интернета)\n")
 
         var numbers: ArrayList<Int> = GetNumbers.get(10)
@@ -27,8 +27,8 @@ class Task1 {
         var sizeMergedList: Int = leftList.size + rightList.size
 
         val mergedList: ArrayList<Int> = ArrayList()
-        var posLeft: Int = 0
-        var posRight: Int = 0
+        var posLeft = 0
+        var posRight = 0
 
         while (sizeMergedList > 0) {
             if (posLeft == leftList.size) mergedList.add(rightList[posRight++])

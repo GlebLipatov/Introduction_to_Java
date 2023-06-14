@@ -1,7 +1,7 @@
 package Introduction.HomeWorks.HW3.Kotlin
 
 class Task3 {
-    fun solution(): Unit {
+    fun solution() {
         println("\n3. Задан целочисленный список ArrayList. Найти минимальное, максимальное и среднее из этого списка.\n")
 
         val numbers: ArrayList<Int> = GetNumbers.get(10)
@@ -18,7 +18,7 @@ class Task3 {
     }
 
     private fun getAverageValue(list: java.util.ArrayList<Int>): Int {
-        var averageValue: Int = 0;
+        var averageValue = 0;
         for (number in list) averageValue += number
 
         return averageValue / list.size
