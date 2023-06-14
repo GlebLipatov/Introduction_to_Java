@@ -1,4 +1,4 @@
-package Introduction.HomeWorks.HW3;
+package Introduction.HomeWorks.HW3.Java;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,5 +6,4 @@ public class Main {
         Task2.solution();
         Task3.solution();
     }
-
 }

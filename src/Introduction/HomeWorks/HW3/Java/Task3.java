@@ -1,4 +1,4 @@
-package Introduction.HomeWorks.HW3;
+package Introduction.HomeWorks.HW3.Java;
 
 import java.util.ArrayList;
 

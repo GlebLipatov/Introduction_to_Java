@@ -1,4 +1,4 @@
-package Introduction.HomeWorks.HW3;
+package Introduction.HomeWorks.HW3.Java;
 
 import java.util.ArrayList;
 
@@ -11,6 +11,7 @@ public class Task2 {
         numbers = removeEvenNumbers(numbers);
         Print.printList("Output list", numbers);
     }
+
     private static ArrayList<Integer> removeEvenNumbers(ArrayList<Integer> list) {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) % 2 == 0) {

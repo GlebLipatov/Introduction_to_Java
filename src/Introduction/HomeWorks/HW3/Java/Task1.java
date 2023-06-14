@@ -1,4 +1,4 @@
-package Introduction.HomeWorks.HW3;
+package Introduction.HomeWorks.HW3.Java;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ public class Task1 {
     public static void solution() {
         System.out.println("1. Реализовать алгоритм сортировки слиянием(метод взять из Интернета)");
 
-        ArrayList<Integer> numbers = GetNumbers.getList(20);
+        ArrayList<Integer> numbers = GetNumbers.getList(10);
         Print.printList("Input list", numbers);
         numbers = mergeSort(numbers);
         Print.printList("Output list", numbers);
