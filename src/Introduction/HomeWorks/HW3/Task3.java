@@ -7,7 +7,7 @@ public class Task3 {
     public static void solution() {
         System.out.println("3. Задан целочисленный список ArrayList. Найти минимальное, максимальное и среднее из этого списка.");
 
-        ArrayList<Integer> numbers = GetList.getList(10);
+        ArrayList<Integer> numbers = GetNumbers.getList(10);
         Print.printList("Input list", numbers);
         Integer minValue = getMinValue(numbers);
         Print.printInteger("Min value: " , minValue);
