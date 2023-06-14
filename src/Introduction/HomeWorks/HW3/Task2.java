@@ -3,7 +3,6 @@ package Introduction.HomeWorks.HW3;
 import java.util.ArrayList;
 
 public class Task2 {
-
     public static void solution() {
         System.out.println("2. Пусть дан произвольный список целых чисел, удалить из него четные числа.");
 
@@ -12,7 +11,6 @@ public class Task2 {
         numbers = removeEvenNumbers(numbers);
         Print.printList("Output list", numbers);
     }
-
     private static ArrayList<Integer> removeEvenNumbers(ArrayList<Integer> list) {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) % 2 == 0) {
@@ -22,12 +20,4 @@ public class Task2 {
         }
         return list;
     }
-
-
-
-
-
-
-
-
 }

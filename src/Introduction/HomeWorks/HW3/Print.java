@@ -8,14 +8,6 @@ public class Print {
         System.out.println(list + "\n");
     }
 
-    public static void printArray(String message, int[] array) {
-        System.out.println(message);
-        for (int number : array) {
-            System.out.print(number + " ");
-        }
-        System.out.println();
-    }
-
     public static void printInteger(String message, Integer number) {
         System.out.println(message + number);
     }

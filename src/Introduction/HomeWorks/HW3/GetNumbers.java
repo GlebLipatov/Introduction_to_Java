@@ -14,13 +14,4 @@ public class GetNumbers {
 
         return list;
     }
-
-    public static int[] getArray(int size) {
-        Random rnd = new Random();
-        int[] array = new int[size];
-        for (int i = 0; i < size; i++) {
-            array[i] = rnd.nextInt(20);
-        }
-        return array;
-    }
 }

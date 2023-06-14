@@ -3,7 +3,6 @@ package Introduction.HomeWorks.HW3;
 import java.util.ArrayList;
 
 public class Task1 {
-
     public static void solution() {
         System.out.println("1. Реализовать алгоритм сортировки слиянием(метод взять из Интернета)");
 
@@ -12,7 +11,6 @@ public class Task1 {
         numbers = mergeSort(numbers);
         Print.printList("Output list", numbers);
     }
-
     private static ArrayList<Integer> mergeSort(ArrayList<Integer> numbers) {
         if (numbers == null) return null;
         if (numbers.size() < 2) return numbers;
@@ -25,7 +23,6 @@ public class Task1 {
 
         return mergeList(leftList, rightList);
     }
-
     private static ArrayList<Integer> mergeList(ArrayList<Integer> leftList, ArrayList<Integer> rightList) {
         int sizeMerge = leftList.size() + rightList.size();
         ArrayList<Integer> mergedList = new ArrayList<>(sizeMerge);
