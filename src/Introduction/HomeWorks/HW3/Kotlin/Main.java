@@ -9,7 +9,5 @@ public class Main {
         task1.solution();
         task2.solution();
         task3.solution();
-
-
     }
 }

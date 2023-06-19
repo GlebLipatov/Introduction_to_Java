@@ -31,10 +31,12 @@ class Task1 {
         var posRight = 0
 
         while (sizeMergedList > 0) {
-            if (posLeft == leftList.size) mergedList.add(rightList[posRight++])
-            else if (posRight == rightList.size) mergedList.add(leftList[posLeft++])
-            else if (leftList[posLeft] < rightList[posRight]) mergedList.add(leftList[posLeft++])
-            else mergedList.add(rightList[posRight++])
+            when {
+                posLeft == leftList.size -> mergedList.add(rightList[posRight++])
+                posRight == rightList.size -> mergedList.add(leftList[posLeft++])
+                leftList[posLeft] < rightList[posRight] -> mergedList.add(leftList[posLeft++])
+                else -> mergedList.add(rightList[posRight++])
+            }
 
             sizeMergedList--
         }

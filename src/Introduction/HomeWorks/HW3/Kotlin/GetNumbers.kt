@@ -9,8 +9,8 @@ class GetNumbers {
         fun get(size : Int) = getList(size)
     }
     fun getList(size : Int) : ArrayList<Int> {
-        var list : ArrayList<Int> = ArrayList(size)
-        val rnd : Random = Random()
+        val list : ArrayList<Int> = ArrayList(size)
+        val rnd = Random()
         for (number in 0..size) {
             list.add(rnd.nextInt())
         }
