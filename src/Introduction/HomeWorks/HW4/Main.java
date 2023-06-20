@@ -1,4 +1,4 @@
-package Introduction.HomeWorks.HW4.Java;
+package Introduction.HomeWorks.HW4;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class Main {
 
         task1.solution();
         task2.solution();
-        action.print(stack.empty(), "Check empty stack");
+        action.print(stack.isEmpty(), "Check empty stack");
         action.print(stack.size(), "Check size of stack");
 
         System.out.println(stack.getTask());
@@ -20,7 +20,7 @@ public class Main {
         action.print(stack.get(), "Push: " + one);
         stack.push(two);
         action.print(stack.get(), "Push: " + two);
-        action.print(stack.empty(), "Check empty stack");
+        action.print(stack.isEmpty(), "Check empty stack");
         action.print(stack.size(), "Check size of stack");
 
         System.out.println();

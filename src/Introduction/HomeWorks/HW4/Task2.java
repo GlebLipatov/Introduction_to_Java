@@ -1,4 +1,4 @@
-package Introduction.HomeWorks.HW4.Java;
+package Introduction.HomeWorks.HW4;
 
 import java.util.LinkedList;
 

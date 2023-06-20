@@ -1,4 +1,4 @@
-package Introduction.HomeWorks.HW4.Java;
+package Introduction.HomeWorks.HW4;
 
 import java.util.Arrays;
 
@@ -12,17 +12,17 @@ public class Task4 {
     }
 
     public Integer[] get() {
-        if (empty()) return null;
+        if (isEmpty()) return null;
         return this.array;
     }
 
-    public boolean empty() {
+    public boolean isEmpty() {
         if (this.array == null || this.array.length == 0) return true;
         return false;
     }
 
     public Integer size() {
-        if (empty())
+        if (isEmpty())
             return 0;
         return this.array.length;
     }
@@ -42,13 +42,13 @@ public class Task4 {
     }
 
     public Integer peek() {
-        if (empty())
+        if (isEmpty())
             return null;
         return array[0];
     }
 
     public Integer pop() {
-        if (empty()) {
+        if (isEmpty()) {
             return null;
         } else {
             int result = array[0];
