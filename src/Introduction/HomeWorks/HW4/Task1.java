@@ -8,7 +8,7 @@ public class Task1 {
         String task = "1. Пусть дан LinkedList с несколькими элементами. Реализуйте метод, который вернет “перевернутый” список.";
         System.out.println(task);
 
-        CollectionActions action = new CollectionActions();
+        Actions action = new Actions();
         LinkedList<Integer> numbers = action.fill(new LinkedList<>(), 10);
         action.print(numbers, "Before:");
         numbers = reverseByValue(numbers);

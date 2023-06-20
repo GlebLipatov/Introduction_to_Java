@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-public class CollectionActions {
+public class Actions {
     Random rnd = new Random();
 
     public LinkedList<Integer> fill(LinkedList<Integer> list, int size) {

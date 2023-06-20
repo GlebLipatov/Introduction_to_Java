@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public class Task2 {
     public void solution() {
-        CollectionActions action = new CollectionActions();
+        Actions action = new Actions();
         String task = "2. Реализуйте очередь с помощью LinkedList со следующими методами: \n" +
                 "enqueue() - помещает элемент в конец очереди,\n" +
                 "dequeue() - возвращает первый элемент из очереди и удаляет его,\n" +

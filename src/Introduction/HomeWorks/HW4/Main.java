@@ -2,7 +2,7 @@ package Introduction.HomeWorks.HW4;
 
 public class Main {
     public static void main(String[] args) {
-        CollectionActions action = new CollectionActions();
+        Actions action = new Actions();
         Task1 task1 = new Task1();
         Task2 task2 = new Task2();
         Task4 stack = new Task4();
