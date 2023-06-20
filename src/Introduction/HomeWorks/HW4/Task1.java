@@ -15,6 +15,11 @@ public class Task1 {
         action.print(numbers, "After:");
     }
 
+    /**
+     * Reverse LinckedList
+     * @param list LinckedList to reverse
+     * @return LinkedList
+     */
     private LinkedList<Integer> reverseByValue(LinkedList<Integer> list) {
         int temp;
         int left = 0;

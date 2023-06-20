@@ -28,12 +28,30 @@ public class Task2 {
 
 
     }
+
+    /**
+     * Add element in the end of queue
+     * @param words LinkedList
+     * @param word String
+     */
     private void enqueue(LinkedList<String> words, String word) {
         words.addLast(word);
     }
+
+    /**
+     * Get first element and remove it
+     * @param words LinkedList
+     * @return String
+     */
     private String dequeue(LinkedList<String> words) {
         return words.pollFirst();
     }
+
+    /**
+     * Get first element
+     * @param words LinkedList
+     * @return String
+     */
     private String first(LinkedList<String> words) {
         return words.getFirst();
     }

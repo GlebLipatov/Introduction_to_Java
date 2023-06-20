@@ -7,26 +7,46 @@ public class Task4 {
     private String task = "\n4. Реализовать стэк с помощью массива. " +
             "Нужно реализовать методы: size(), empty(), push(), peek(), pop().\n ";
 
+    /**
+     * Get task message.
+     * @return String
+     */
     public String getTask() {
         return this.task;
     }
 
+    /**
+     * Get stack.
+     * @return Integer[]
+     */
     public Integer[] get() {
         if (isEmpty()) return null;
         return this.array;
     }
 
+    /**
+     * Check some element in stack
+     * @return boolean
+     */
     public boolean isEmpty() {
         if (this.array == null || this.array.length == 0) return true;
         return false;
     }
 
+    /**
+     * Get size of stack
+     * @return Integer
+     */
     public Integer size() {
         if (isEmpty())
             return 0;
         return this.array.length;
     }
 
+    /**
+     * Add element in the end of stack.
+     * @param value Integer
+     */
     public void push(int value) {
         if (this.array == null) {
             this.array = new Integer[1];
@@ -41,12 +61,20 @@ public class Task4 {
         }
     }
 
+    /**
+     * Get last element
+     * @return Integer
+     */
     public Integer peek() {
         if (isEmpty())
             return null;
         return array[0];
     }
 
+    /**
+     * Get last element and remove it from stack
+     * @return Integer
+     */
     public Integer pop() {
         if (isEmpty()) {
             return null;
