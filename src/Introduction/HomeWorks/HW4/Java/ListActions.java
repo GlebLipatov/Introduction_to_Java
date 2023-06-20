@@ -1,6 +1,7 @@
 package Introduction.HomeWorks.HW4.Java;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Random;
 
 public class ListActions {
@@ -13,8 +14,13 @@ public class ListActions {
         return list;
     }
 
-    public void print(LinkedList<Integer> list, String message) {
+    public void print(List list, String message) {
         System.out.println(message);
         System.out.println(list);
+    }
+
+    public void print(String word, String message) {
+        System.out.println(message);
+        System.out.println(word);
     }
 }
