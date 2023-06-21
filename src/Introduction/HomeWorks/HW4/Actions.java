@@ -8,7 +8,7 @@ public class Actions {
     Random rnd = new Random();
 
     /**
-     * Fill list randome integers
+     * Fill list random integers
      * @param list LinkedList
      * @param size Ineger
      * @return LinkedList
