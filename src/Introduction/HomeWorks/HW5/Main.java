@@ -5,5 +5,6 @@ public class Main {
         Task1 task1 = new Task1();
 
         task1.solution();
+        Task2.solution();
     }
 }
