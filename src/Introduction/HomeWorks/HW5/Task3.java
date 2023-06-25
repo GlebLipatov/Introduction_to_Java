@@ -34,8 +34,8 @@ public class Task3 {
      */
     private Integer start(Integer row) {
         if (fields.size() == 92) return null;
-        if (!hasNextPosition(row)) {
 
+        if (!hasNextPosition(row)) {
             if (hasQueen(row))
                 removeQueen(row);
 
@@ -158,7 +158,7 @@ public class Task3 {
      * @return boolean
      */
     private boolean checkRightDiagonal(int row, int cell) {
-        if (row > 0 && cell < 6)
+        if (row > 0 && cell < 7)
             for (int r = row - 1, c = cell + 1; r >= 0 && c < SIZE; r--, c++)
                 if (field[r][c]) return true;
         return false;
