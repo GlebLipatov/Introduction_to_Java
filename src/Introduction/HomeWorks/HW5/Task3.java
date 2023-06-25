@@ -9,6 +9,7 @@ public class Task3 {
     private static final boolean QUEEN = true;
     private ArrayList<Boolean[][]> fields = new ArrayList<>();
     private Boolean[][] field = new Boolean[SIZE][SIZE];
+    private int count = 0;
 
     // хранит положение ферзей в ряду
     // индекс - номер ряда,
@@ -32,32 +33,46 @@ public class Task3 {
      * @return Integer
      */
     private Integer start(Integer row) {
-        if (fields.size() == 1) return -1;
+        if (fields.size() == 92) return null;
         if (!hasNextPosition(row)) {
-            if (row == 0) return null;
+
             if (hasQueen(row))
                 removeQueen(row);
-            return start(row - 1);
+
+            if (row > 0)
+                return start(row - 1);
+        } else {
+            int nextPosition = getNextPosition(row);
+
+            if (hasQueen(row))
+                removeQueen(row);
+
+            field[row][nextPosition] = QUEEN;
+            queens[row] = nextPosition;
+
+            if (row < 7) {
+                start(row + 1);
+            } else {
+                addField(field);
+                removeQueen(row);
+                start(row - 1);
+            }
         }
+        return null;
+    }
 
-        int nextPosition = getNextPosition(row);
-
-        if (hasQueen(row))
-            removeQueen(row);
-
-        field[row][nextPosition] = QUEEN;
-        queens[row] = nextPosition;
-
-        if (row < 7)
-            start(row + 1);
-
-        //print(field);
-        fields.add(Arrays.copyOfRange(field, 0, SIZE));
-
-        if (hasQueen(row))
-            removeQueen(row);
-
-        return start(row - 1);
+    /**
+     * Add field to List with results.
+     * @param - Boolean[][]
+     */
+    private void addField(Boolean[][] field) {
+        Boolean[][] next = new Boolean[SIZE][SIZE];
+        for (int i = 0; i < 8;i++) {
+            for (int j = 0; j < 8; j++) {
+                next[i][j] = field[i][j];
+            }
+        }
+        fields.add(next);
     }
 
     /**
