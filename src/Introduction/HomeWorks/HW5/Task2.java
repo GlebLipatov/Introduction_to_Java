@@ -3,14 +3,14 @@ package Introduction.HomeWorks.HW5;
 import java.util.Random;
 
 public class Task2 {
-    private static String task = "2. Реализовать алгоритм пирамидальной сортировки (HeapSort)";
+    private static String task = "\n2. Реализовать алгоритм пирамидальной сортировки (HeapSort)\n";
     public static void solution() {
-        System.out.println("\n" + task + "\n");
+        System.out.println(task);
         int[] array = fill(new int[10]);
 
-        print(array, "До сортровки");
+        print(array, "До сортровки:");
         heapSort(array);
-        print(array, "После сортировки");
+        print(array, "После сортировки:");
     }
 
     /**
