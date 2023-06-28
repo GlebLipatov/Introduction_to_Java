@@ -14,13 +14,13 @@ public class Notebook {
     private int monitorSize;
 
     /**
-     *
-     * @param - String
-     * @param - int
-     * @param - int
-     * @param - int
-     * @param - int
-     * @param - int
+     * Constructor
+     * @param manufacturer String
+     * @param processorFrequency int
+     * @param ramCapacity int
+     * @param memoryCapacity int
+     * @param videoCapacity int
+     * @param monitorSize int
      */
     public Notebook(String manufacturer,
                     int processorFrequency,

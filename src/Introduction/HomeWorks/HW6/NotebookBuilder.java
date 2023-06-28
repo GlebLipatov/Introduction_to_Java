@@ -7,16 +7,15 @@ public class NotebookBuilder {
     Components components;
 
     /**
-     * Init Components in this exemplar NotebookBuilder.
+     * Constructor and init Components in this exemplar NotebookBuilder.
      */
-    public void init() {
+    public NotebookBuilder() {
         this.components = new Components();
-        this.components.init();
     }
 
     /**
      * Build new random notebook.
-     * @return Notebook
+     * @return new Notebook
      */
     public Notebook buildNotebook(){
         int lim = 4;
@@ -38,36 +37,14 @@ public class NotebookBuilder {
 
     /**
      * Build current quantity random notebooks and added them in to HashSet.
-     * @param - int
-     * @return HashSet<Notebook>
+     * @param quantity of new notebooks. (int)
+     * @return Set of new Notebooks (HashSet< Notebook >)
      */
     public HashSet<Notebook> buildNotebooks(int quantity) {
-        int lim = 4;
-        Random rnd = new Random();
         HashSet<Notebook> notebooks = new HashSet<>();
-        String manufacturer;
-        int processorFrequency;
-        int ramCapacity;
-        int memoryCapacity;
-        int videoCapacity;
-        int monitorSize;
 
-        for (int i = 0; i < quantity; i++) {
-            manufacturer = components.getManufacturer().get(rnd.nextInt(1, lim));
-            processorFrequency = components.getProcessorFrequency().get(rnd.nextInt(1, lim));
-            ramCapacity = components.getRamCapacity().get(rnd.nextInt(1, lim));
-            memoryCapacity = components.getMemoryCapacity().get(rnd.nextInt(1, lim));
-            videoCapacity = components.getVideoCapacity().get(rnd.nextInt(1, lim));
-            monitorSize = components.getMonitorSize().get(rnd.nextInt(1, lim));
-
-            notebooks.add(new Notebook(
-                    manufacturer,
-                    processorFrequency,
-                    ramCapacity,
-                    memoryCapacity,
-                    videoCapacity,
-                    monitorSize));
-        }
+        for (int i = 0; i < quantity; i++)
+            notebooks.add(buildNotebook());
 
         return notebooks;
     }

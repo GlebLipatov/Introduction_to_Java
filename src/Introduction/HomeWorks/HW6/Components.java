@@ -11,13 +11,24 @@ public class Components {
     private Map<Integer, Integer> videoCapacity;
     private Map<Integer, Integer> monitorSize;
 
-    public void init() {
+    /**
+     * Cotr default and init.
+     */
+    public Components() {
         this.manufacturer = new HashMap<>();
         this.processorFrequency = new HashMap<>();
         this.ramCapacity = new HashMap<>();
         this.memoryCapacity = new HashMap<>();
         this.videoCapacity = new HashMap<>();
         this.monitorSize = new HashMap<>();
+
+        init();
+    }
+
+    /**
+     * Init components.
+     */
+    public void init() {
 
         this.manufacturer.put(1, "Asus");
         this.manufacturer.put(2, "Acer");
